@@ -1,0 +1,3 @@
+[submodule "Compiler backend/Compylex"]
+	path = Compiler backend/Compylex
+	url = https://github.com/AshiqAbdulkhader/Compylex
