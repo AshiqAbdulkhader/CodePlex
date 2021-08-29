@@ -5,5 +5,6 @@ export const BgBlur = styled.img`
     top: 0px;
     left: 0px;
     width: 100vw;
+    height:300vh;
     opacity: 0.3;
 `;

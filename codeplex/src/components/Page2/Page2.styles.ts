@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
     width: 100vw;
     position: relative;
     top: 100px;
+    // border: 1px solid white;
 `;
 
 export const BackLogo = styled.img`

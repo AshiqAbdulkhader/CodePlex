@@ -24,7 +24,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background: #222222;
-    background-image: 
+    width: 100vw;
+    overflow-x:hidden;
     
     h1 {
       font-size: 2rem;

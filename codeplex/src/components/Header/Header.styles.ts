@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
 	padding: 0 178px;
 	height: 100px;
 	border-bottom: 1px solid rgba(229, 229, 229, 0.2);
-	position: fixed;
+	position: relative;
 	top: 0;
 	width: 100%;
 	z-index:10;
