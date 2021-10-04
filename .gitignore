@@ -3,3 +3,6 @@ codeplex/node_modules
 *.pyc
 *.pyc
 Compiler backend/compylex/__pycache__/compiler.cpython-39.pyc
+
+# Local Netlify folder
+.netlify
