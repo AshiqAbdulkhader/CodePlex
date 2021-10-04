@@ -11,7 +11,7 @@ export const Wrapper = styled.div<Props>`
     position: relative;
     top: ${p=>p.top}%;
     left: ${p=>p.left}%;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255);
     padding: 0px;
 `;
 
@@ -33,7 +33,6 @@ export const Ltext = styled.div`
 `;
 
 export const Simg = styled.img`
-    // width: 25%;
     height: 90%;
     float: right;
 `;
