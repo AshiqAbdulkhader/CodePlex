@@ -1,29 +1,43 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 
+//Assets
 import '../../fonts.css';
 import CodePlexLogo from "../../images/logo.svg";
 import CodePlexText from "../../images/Codeplex.svg";
 import Search from "../../images/search.svg";
-import {Wrapper, LogoImg, LogoText, HeaderLink, Content, SearchButton, SearchImg, SignIn} from './Header.styles';
+
+//Components
+import {Wrapper, Container,  LogoImg, LogoText, HeaderLink, Content, SearchButton, SearchImg} from './Header.styles';
+import { GenericButton } from "../GenericButton/GenericButton.styles";
+import {LinkContainer} from "react-router-bootstrap";
 
 const Header: React.FC = () => (
 		<Wrapper>
 			<Content>
-				<Link to='/'>
-					<div>
+				<LinkContainer to='/'>
+					<Container>
 						<LogoImg src={CodePlexLogo} alt="logo"/>
 						<LogoText src={CodePlexText} alt="logo-text"/>
-					</div>
-				</Link>
-				<HeaderLink href={`#`}>Features</HeaderLink>
-				<HeaderLink href={`#`}>About</HeaderLink>
-				<HeaderLink href={`#`}>Contact</HeaderLink>
-				<HeaderLink href={`#`}>Contributors</HeaderLink>
-					<SearchButton>
-						<SearchImg src={Search} alt="Search button"/>
-					</SearchButton>
-					<SignIn>Sign In</SignIn>
+					</Container>
+				</LinkContainer>
+				<LinkContainer to='/features'>
+					<HeaderLink>Features</HeaderLink>
+				</LinkContainer>
+				<LinkContainer to='/about'>
+					<HeaderLink>About</HeaderLink>
+				</LinkContainer>
+				<LinkContainer to='/contact'>
+					<HeaderLink>Contact</HeaderLink>
+				</LinkContainer>
+				<LinkContainer to='/contributors'>
+					<HeaderLink>Contributors</HeaderLink>
+				</LinkContainer>
+				<SearchButton>
+					<SearchImg src={Search} alt="Search button"/>
+				</SearchButton>
+				<LinkContainer to='/login'>
+					<GenericButton>Sign In</GenericButton>
+				</LinkContainer>
 			</Content>
 		</Wrapper>
 	);
