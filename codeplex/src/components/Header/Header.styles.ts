@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-	background: #202020;
+	background: #131516;
 	height: 100px;
 	padding: 0 20px;
 	border-bottom: 1px solid rgba(229, 229, 229, 0.2);
