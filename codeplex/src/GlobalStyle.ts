@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: #222222;
+    background: #131516;
     width: 100vw;
     overflow-x:hidden;
     

@@ -10,10 +10,10 @@ export const WrapperMain = styled.div`
 
 export const Wrapper = styled.div`
 	background: transparent;
-	padding: 0 178px;
+	padding: 0 9vw;
     width: 100vw;
     position: relative;
-    top: 100px;
+    top: 10vh;
 `;
 
 export const BackLogo = styled.img`
@@ -45,8 +45,8 @@ export const PopHead = styled.div`
     font-family: Josefin Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 116px;
-    line-height: 128px;
+    font-size: 14vh;
+    line-height: 14vh;
     letter-spacing: 0.015em;
 
     color: #FFFFFF;
@@ -58,7 +58,7 @@ export const PopPara = styled.div`
     font-family: Josefin Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 39px;
+    font-size: 4vh;
     line-height: 110%;
 
     letter-spacing: 0.015em;
@@ -118,24 +118,24 @@ export const BackLogoV3 = styled(BackLogo)`
 `;
 
 export const Line = styled.hr`
-    width: 770px;
+    width: 40vw;
     position: relative;
     transform: translateX(-50%);
-    left: 900px;
-    top: 120px;
+    left: 47vw;
+    top: 13vh;
     color: #fff;
 `;
 
 export const Texcon = styled.div`
     position: relative;
     transform: translateX(-50%);
-    left: 900px;
-    top: 160px;
+    left: 47vw;
+    top: 17vh;
     font-family: Josefin Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
-    line-height: 59px;
+    font-size: 5vh;
+    line-height: 6vh;
     text-align: right;
     color: #FFFFFF;
 `;
@@ -144,14 +144,14 @@ export const SmallerText = styled.div`
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 4vh;
+    line-height: 5vh;
     text-align: right;
     color: #EFEFEF;
     
     position: relative;
     transform: translateX(-50%);
-    left: 900px;
-    top: 200px;
+    left: 47vw;
+    top: 17vh;
     font-weight: 400;
 `;
