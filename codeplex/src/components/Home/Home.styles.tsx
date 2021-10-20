@@ -114,6 +114,8 @@ export const WrapperV3 = styled(Wrapper)`
 export const BackLogoV3 = styled(BackLogo)`
     left: 7%;
     top: 47%;
+    max-height: 80vh;
+    width: auto;
     transform: translateY(-50%);
 `;
 
