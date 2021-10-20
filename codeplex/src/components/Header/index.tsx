@@ -2,18 +2,18 @@ import React from "react";
 
 //Assets
 import '../../fonts.css';
+import './active-ui.css';
 import CodePlexLogo from "../../images/logo.svg";
 import CodePlexText from "../../images/Codeplex.svg";
 import Search from "../../images/search.svg";
 
 //Components
-import {Wrapper, Container,  LogoImg, LogoText, HeaderLink, Content, SearchButton, SearchImg} from './Header.styles';
+import {Wrapper, Container,  LogoImg, LogoText, HeaderLink, SearchButton, SearchImg} from './Header.styles';
 import { GenericButton } from "../GenericButton/GenericButton.styles";
 import {LinkContainer} from "react-router-bootstrap";
 
 const Header: React.FC = () => (
 		<Wrapper>
-			<Content>
 				<LinkContainer to='/'>
 					<Container>
 						<LogoImg src={CodePlexLogo} alt="logo"/>
@@ -38,7 +38,6 @@ const Header: React.FC = () => (
 				<LinkContainer to='/login'>
 					<GenericButton>Sign In</GenericButton>
 				</LinkContainer>
-			</Content>
 		</Wrapper>
 	);
 
