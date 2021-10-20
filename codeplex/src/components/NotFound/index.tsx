@@ -4,7 +4,7 @@ import {Wrapper} from "./NotFound.styles";
 
 const NotFound: React.FC = () => (
     <Wrapper>
-      <h3>Sorry, page not found!</h3>
+      <h1>Sorry, page not found!</h1>
     </Wrapper>
 );
 
