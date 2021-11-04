@@ -1,4 +1,5 @@
 codeplex/node_modules
+node_modules
 *.pyc
 *.pyc
 *.pyc

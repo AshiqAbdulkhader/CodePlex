@@ -4,13 +4,10 @@ import React from 'react';
 import Routes from "./Routes";
 
 //Components
-import Header from './components/Header';
-
 console.log("Under construction!!");
 
 const App: React.FC = () => (
 	<div>
-		<Header/>
 		<Routes/>
 	</div>
 );
