@@ -25,7 +25,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     background: #131516;
     width: 100vw;
-    overflow-x:hidden;
     
     h1 {
       font-size: 2rem;

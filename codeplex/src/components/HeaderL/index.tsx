@@ -5,9 +5,10 @@ import '../../fonts.css';
 import CodePlexLogo from "../../images/logo.svg";
 import CodePlexText from "../../images/Codeplex.svg";
 import Search from "../../images/search.svg";
+import NavCode from "../../images/navCode.svg";
 
 //Components
-import { Wrapper, Container, LogoImg, LogoText, SearchButton, SearchImg, Logout } from './HeaderL.styles';
+import { Wrapper, Container, LogoImg, LogoText, Playground, PlaygroundImg, SearchButton, SearchImg, Logout } from './HeaderL.styles';
 import { LinkContainer } from "react-router-bootstrap";
 import {
 	logout
@@ -20,6 +21,11 @@ const Header: React.FC = () => (
 				<LogoImg src={CodePlexLogo} alt="logo" />
 				<LogoText src={CodePlexText} alt="logo-text" />
 			</Container>
+		</LinkContainer>
+		<LinkContainer to='/playground'>
+			<Playground> 
+				<PlaygroundImg src={NavCode} alt="Code playground" />
+			</Playground>
 		</LinkContainer>
 		<SearchButton>
 			<SearchImg src={Search} alt="Search button" />

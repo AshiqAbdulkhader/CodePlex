@@ -97,7 +97,7 @@ export const SearchButton = styled.div`
 	border-radius: 30px;
 	background-color: #5E5E5E;
 	cursor: pointer;
-	// [Hardcoded position for now. Likely to break in screens with weird resolutions.]
+	// [Hardcoded position for now. Likely to break in screens with weird resolutions or scaling.]
 	position: absolute;
 	right: 160px;
 	margin-right: 40px;
@@ -106,6 +106,29 @@ export const SearchButton = styled.div`
 export const SearchImg = styled.img`
 	height: 50%;
 	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+`;
+
+export const Playground = styled.div`
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	background-color: #247838;
+	cursor: pointer;
+	padding: 0px;
+	// [Hardcoded position for now. Likely to break in screens with weird resolutions or scaling.]
+	position: absolute;
+	right: 220px;
+	margin: 0px;
+	margin-right: 60px;
+	align-text: center;
+`;
+
+export const PlaygroundImg = styled.img`
+	height: 50%;
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);

@@ -2,15 +2,11 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 	background: #131516;
-	height: calc(100vh - 100px);
-	padding: 10px 20px;
+	min-height: calc(100vh - 100px);
 	border-bottom: 1px solid rgba(229, 229, 229, 0.2);
 	position: relative;
 	width: 100vw;
-	display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: var(--maxWidth);
+	max-width: var(--maxWidth);
 `;
 
 export const Container = styled.div`
@@ -19,5 +15,9 @@ export const Container = styled.div`
 	margin: 0px;
     color: #fff;
     font-size: 40px;
+	min-width: calc(100vw - 140px);
+	height: 100%;
+	min-height: calc(100vh - 100px);
+	float: right;
+	text-align: center;
 `;
-
