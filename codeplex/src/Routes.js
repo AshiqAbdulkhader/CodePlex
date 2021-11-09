@@ -40,7 +40,7 @@ export default function Routes() {
 			</Route>
 			<Route exact path="/class">
 				<HeaderL />
-				
+
 				<ConstructionPrompt />
 			</Route>
 			<Route exact path="/code">
@@ -62,6 +62,10 @@ export default function Routes() {
 			<Route exact path="/settings">
 				<HeaderL />
 				<ConstructionPrompt />
+			</Route>
+			<Route exact path="/playground">
+				<HeaderL />
+				<Dashboard />
 			</Route>
 			<Route>
 				<Header />

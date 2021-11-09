@@ -1,7 +1,8 @@
 codeplex/node_modules
-codeplex/.firebase/
+codeplex/.firebase
 codeplex/build/
 codeplex/.firebaserc
+codeplex/.firebase.json
 codeplex/src/react-app-env.d.ts
 codeplex/build
 *.pyc
@@ -11,3 +12,4 @@ Compiler backend/compylex/__pycache__/compiler.cpython-39.pyc
 
 # Local Netlify folder
 .netlify
+codeplex/.firebase/hosting.YnVpbGQ.cache

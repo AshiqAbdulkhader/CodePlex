@@ -23,7 +23,7 @@ const Header: React.FC = () => (
 			</Container>
 		</LinkContainer>
 		<LinkContainer to='/playground'>
-			<Playground> 
+			<Playground onClick={() => {alert("Under construction.")}}> 
 				<PlaygroundImg src={NavCode} alt="Code playground" />
 			</Playground>
 		</LinkContainer>
