@@ -28,9 +28,6 @@ const Header: React.FC = () => (
 		<LinkContainer to='/contact'>
 			<HeaderLink>Contact</HeaderLink>
 		</LinkContainer>
-		<LinkContainer to='/contributors'>
-			<HeaderLink>Contributors</HeaderLink>
-		</LinkContainer>
 		<SearchButton>
 			<SearchImg src={Search} alt="Search button" />
 		</SearchButton>

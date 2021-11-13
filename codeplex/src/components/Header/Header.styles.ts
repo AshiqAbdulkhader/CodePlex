@@ -12,9 +12,9 @@ export const Wrapper = styled.div`
 	box-shadow: 0 1px 13px 7px rgba(0,0,0,0.08);
 
 	display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: var(--maxWidth);
+  	align-items: center;
+  	justify-content: space-between;
+ 	max-width: var(--maxWidth);
 `;
 
 export const Container = styled.div`
