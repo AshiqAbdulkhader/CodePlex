@@ -10,7 +10,7 @@ class Item(BaseModel):
     code: str
     lang: str
     input: str
-    id: int
+    id: str
 
 
 app = FastAPI()
