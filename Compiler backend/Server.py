@@ -20,9 +20,10 @@ app = FastAPI()
 async def create_item(item: Item):
     result = Compile(item.code, item.lang, item.input, item.id)
     output = result.get_output()
+    status = result.get_status()
     data = {
         'output': output,
-        'status': result.get_status()
+        'status': status
     }
     data = json.dumps(data)
     return data
