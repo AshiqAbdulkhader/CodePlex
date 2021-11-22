@@ -4,7 +4,6 @@ import { GenericButton } from "../GenericButton/GenericButton.styles";
 import Editor from "../Editor";
 
 const Playground: React.FC = () => (
-    
     <Wrapper>
       <CodeSide>
           <Editor/>
