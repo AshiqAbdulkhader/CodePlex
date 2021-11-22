@@ -17,7 +17,6 @@ export const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
   }
 
   body {
