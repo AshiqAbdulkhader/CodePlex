@@ -22,6 +22,7 @@ export const Wrapper = styled.div<Props>`
     margin-top: 10px;
     border-radius: 8px;
     cursor: pointer;
+    user-select: none;
 `;
 
 export const Ltext = styled.div<Props>`
@@ -36,7 +37,8 @@ export const Ltext = styled.div<Props>`
     letter-spacing: 0.065em;
     display: inline-block; 
     vertical-align: middle;
-    
+    user-select: none;
+
     color: ${props => props.selected ? '#000' : '#F5F5F5'};
 
 `;

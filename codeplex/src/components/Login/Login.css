@@ -1,80 +1,111 @@
 @media all and (min-width: 480px) {
   .Login {
-    padding: 60px 0;
     width: 100vw;
     height: calc(100vh - 100px);
-    margin: auto;
     background-repeat: no-repeat;
-  }
-
-  .BackLogo{
-    content: url("../../images/main_logo.svg");
-    position: absolute;
-    opacity: 25%;
-    left: 0%;
-    top: 10%;
-  }
-
-  .Login form {
-    width: 40vw;
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #7b7265;
-    padding: 3vh;
-    border-radius: 2vh;
-    background-color: #111213;
   }
 
-  Label {
-    color: white;
-    margin-right: 20px;
+  .BackLogo {
+    content: url("../../images/logoMaxRes.svg");
+    /* replace with new image resource*/
+    /* position: relative; */
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    display: none;
+  }
+
+  .leftImg {
+    left: 0%;
+    transform: translate(-50%, -50%);
+  }
+
+  .rightImg {
+    right: 0%;
+    transform: translate(50%, -50%);
+  }
+
+  .Login form {
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 2vh;
+    background-color: #000000;
+  }
+
+  .Login-border-wrap {
+    width: calc(37vw + 3px);
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    background: linear-gradient(135deg, #00ffddb6, #ffae00b6);
+    border-radius: 2vh;
+    padding: 2px;
   }
 
   Input {
     height: 6vh;
     width: 30vw;
     border-radius: 3.5vh;
-    user-select: none;
     text-decoration: none;
-    border: 1px solid #7b7265;
-    text-align: center;
-    font-size: 3vh;
+    border: none;
+    text-align: left;
+    padding-left: 2rem;
+    font-size: 2.5vh;
     outline: none;
     font-family: Consolas;
     font-weight: 600;
-    background-color: #181a1b; 
-    color: #7b7265;
+    background-color: #404446;
+    color: #ffffff;
   }
 
-  .form-group{
-    margin: 3.5vh 10px;
+  .form-group {
+    margin: 2.5vh 0px;
   }
 
-  Button{
+  .Login-forgot-password {
+    position: relative;
+    top: 1vh;
+    left: 40%;
+    transform: translateX(-50%);
+    color: #3DB2A2;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -0.03em;
+    user-select: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .Login-submit-button {
     height: 6.5vh;
-	  margin-top: 5%;
+    margin-top: 5%;
     font: 'Josefin Sans';
-	  font-size: 3vh;
-	  border-radius: 3vh;
-	  padding-left: 3vh;
-	  padding-right: 3vh;
-	  font-weight: 700;
-	  background: linear-gradient(90deg, #3DB2A2 -5.73%, #FDD273 100%);
-	  border: 0px;
-	  cursor: pointer;
+    font-size: 3vh;
+    border-radius: 3vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    font-weight: 700;
+    background: linear-gradient(90deg, #3DB2A2 -5.73%, #FDD273 100%);
+    border: 0px;
+    cursor: pointer;
     color: #000;
   }
 
-  ::placeholder{
-    text-align: center;
-    color: #7b7265;
+  ::placeholder {
+    text-align: left;
+    padding-left: 1rem;
+    color: #ffffff;
     font-size: 2.5vh;
     font-family: 'Courier New', Courier, monospace;
   }
 
-} 
+}

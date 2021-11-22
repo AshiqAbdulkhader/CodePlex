@@ -10,6 +10,7 @@ type Props = {
 	iconS: string;
 	text: string;
 	selected: boolean;
+	id: number;
 }
 
 

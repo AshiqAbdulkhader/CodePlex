@@ -2,10 +2,13 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 import Login from "./components/Login";
-import Dashboard from "./components/Dashboard";
 import Header from "./components/Header";
 import HeaderL from "./components/HeaderL";
 import ConstructionPrompt from "./components/ConstructionPrompt";
+import SideNav from "./components/SideNav";
+
+//Routing
+import DashRoutes from "./DashRoutes";
 
 export default function Routes() {
 	return (
@@ -34,39 +37,21 @@ export default function Routes() {
 				<Header />
 				<ConstructionPrompt />
 			</Route>
-			<Route exact path="/dashboard">
-				<HeaderL />
-				<Dashboard />
-			</Route>
-			<Route exact path="/class">
-				<HeaderL />
-
-				<ConstructionPrompt />
-			</Route>
-			<Route exact path="/code">
-				<HeaderL />
-				<ConstructionPrompt />
-			</Route>
-			<Route exact path="/history">
-				<HeaderL />
-				<ConstructionPrompt />
-			</Route>
-			<Route exact path="/cheatsheet">
-				<HeaderL />
-				<ConstructionPrompt />
-			</Route>
-			<Route exact path="/performance">
-				<HeaderL />
-				<ConstructionPrompt />
-			</Route>
-			<Route exact path="/settings">
-				<HeaderL />
-				<ConstructionPrompt />
-			</Route>
-			<Route exact path="/playground">
-				<HeaderL />
-				<Dashboard />
-			</Route>
+			{[
+				"/dashboard",
+				"/class",
+				"/code",
+				"/history",
+				"/cheat",
+				"/performance",
+				"/settings",
+			].map((path, index) => (
+				<Route path={path}>
+					<HeaderL />
+					<SideNav selected={index} />
+					<DashRoutes />
+				</Route>
+			))}
 			<Route>
 				<Header />
 				<NotFound />

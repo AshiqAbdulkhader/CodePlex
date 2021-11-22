@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import {
 	auth,
 	signInWithEmailAndPassword,
+	sendPasswordResetEmail,
 	// signInWithGoogle,
 } from "../../Firebase";
 // eslint-disable-next-line
@@ -32,35 +33,44 @@ export default function Login() {
 
 	return (
 		<div className="Login">
-			<img className="BackLogo" alt="Website Logo"></img>
-			<Form onSubmit={handleSubmit}>
-				<Form.Group size="lg" controlId="email">
-					<Form.Control
-						autoFocus
-						type="email"
-						value={email}
-						placeholder="Username"
-						onChange={(e) => setEmail(e.target.value)}
-					/>
-				</Form.Group>
-				<Form.Group size="lg" controlId="password">
-					<Form.Control
-						type="password"
-						value={password}
-						placeholder="Password"
-						onChange={(e) => setPassword(e.target.value)}
-					/>
-				</Form.Group>
-				<Button
-					block
-					size="lg"
-					type="submit"
-					disabled={!validateForm()}
-					onClick={() => signInWithEmailAndPassword(email, password)}
-				>
-					Sign In
-				</Button>
-				{/* <Button
+			<img className="BackLogo leftImg" alt="Website Logo - left"></img>
+			<img className="BackLogo rightImg" alt="Website Logo - right"></img>
+			<div className="Login-border-wrap">
+				<Form onSubmit={handleSubmit}>
+					<Form.Group size="lg" controlId="email">
+						<Form.Control
+							autoFocus
+							type="email"
+							value={email}
+							placeholder="Username"
+							onChange={(e) => setEmail(e.target.value)}
+						/>
+					</Form.Group>
+					<Form.Group size="lg" controlId="password">
+						<Form.Control
+							type="password"
+							value={password}
+							placeholder="Password"
+							onChange={(e) => setPassword(e.target.value)}
+						/>
+					</Form.Group>
+					<Button
+						className="Login-forgot-password"
+						onClick={() => sendPasswordResetEmail(email)}
+					>
+						Forgot Password?
+					</Button>
+					<Button
+						block
+						className="Login-submit-button"
+						size="lg"
+						type="submit"
+						disabled={!validateForm()}
+						onClick={() => signInWithEmailAndPassword(email, password)}
+					>
+						Sign In
+					</Button>
+					{/* <Button
 					block
 					size="lg"
 					type="submit"
@@ -68,7 +78,8 @@ export default function Login() {
 				>
 					Sign in with Google
 				</Button> */}
-			</Form>
+				</Form>
+			</div>
 		</div>
 	);
 }

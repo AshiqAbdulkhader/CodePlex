@@ -5,19 +5,20 @@ export const Wrapper = styled.div`
 	min-height: calc(100vh - 100px);
 	border-bottom: 1px solid rgba(229, 229, 229, 0.2);
 	position: relative;
-	width: 100vw;
+	min-width: calc(100vw - 140px);
+	min-height: calc(100vh - 100px);
+	height: 100%;
+	float: right;
 	max-width: var(--maxWidth);
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	box-sizing: border-box;
+	color: #fff;
+	font-size: 40px;
 `;
 
 export const Container = styled.div`
-	box-sizing: border-box;
-	padding: 0px;
-	margin: 0px;
-    color: #fff;
-    font-size: 40px;
-	min-width: calc(100vw - 140px);
 	height: 100%;
-	min-height: calc(100vh - 100px);
-	float: right;
-	text-align: center;
+	width: 100%;
 `;
