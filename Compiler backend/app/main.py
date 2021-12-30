@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from Compylex.compylex.compiler import Compile
+from compylex.compiler import Compile
 import json
 
 
