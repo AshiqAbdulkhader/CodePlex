@@ -1,9 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from compylex.compiler import Compile
+from Compylex.compylex.compiler import Compile
 import json
-import ray
-from ray import serve
 
 
 class Item(BaseModel):
