@@ -120,6 +120,7 @@ const Editor: React.FC = () => {
 					lineNumbers: true,
 					indentWithTabs: true,
 					tabSize: 4,
+					indentUnit: 4,
 				}}
 				onChange={(editor, data, value) => {}}
 			/>
