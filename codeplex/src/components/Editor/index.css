@@ -1,3 +1,77 @@
-#basic-code-editor {
+@import 'codemirror/lib/codemirror.css';
+@import 'codemirror/theme/blackboard.css';
+@import 'codemirror/theme/colorforth.css';
+@import 'codemirror/theme/isotope.css';
+@import 'codemirror/theme/moxer.css';
+@import 'codemirror/theme/night.css';
+@import 'codemirror/theme/panda-syntax.css';
+@import 'codemirror/theme/shadowfox.css';
+@import 'codemirror/theme/the-matrix.css';
+@import 'codemirror/theme/vibrant-ink.css';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Ubuntu:wght@300&display=swap');
+
+option {
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 100%;
+    text-align: center;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+}
+
+.react-codemirror2 {
+    height: 93%;
+    width: 100%;
     border-radius: inherit;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.CodeMirror {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    text-align: left;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+#btn-download svg {
+    fill: none;
+    transform: translate3d(0, 0, 0);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#btn-download svg polyline,
+#btn-download svg path {
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: all 0.3s ease;
+    transition-delay: 0.3s;
+}
+
+#btn-download svg path#check {
+    stroke-dasharray: 38;
+    stroke-dashoffset: 114;
+    transition: all 0.4s ease;
+}
+
+#btn-download.downloaded svg .svg-out {
+    opacity: 0;
+    animation: drop 0.3s linear;
+    transition-delay: 0.4s;
+}
+
+#btn-download.downloaded svg path#check {
+    stroke: #20CCA5;
+    stroke-dashoffset: 174;
+    transition-delay: 0.4s;
 }
