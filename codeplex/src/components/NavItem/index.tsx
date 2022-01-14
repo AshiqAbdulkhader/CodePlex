@@ -22,8 +22,6 @@ function srcSetter(selected: boolean, icon: string, iconS: string) {
 }
 
 
-
-
 const NavItem: React.FC<Props> = ({icon, iconS, text, selected}) => {	
 	
 	return (

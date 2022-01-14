@@ -42,4 +42,32 @@ export const GlobalStyle = createGlobalStyle`
       color: var(--white);
     }
   }
+
+  /* [Scrollbar css] */
+		
+  ::-webkit-scrollbar {
+  	height: 5px;
+  	width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #b2b4b8;
+  	border-radius: 5px;
+  }
+
+  .outputWindow:hover::-webkit-scrollbar-thumb {
+      background: #e63737;
+  }
+
+  .CodeMirror:hover ::-webkit-scrollbar-thumb{
+  	background: #e63737;
+  }
+
+  body:hover body::-webkit-scrollbar-thumb{
+  	background: #e63737;
+  }
 `;

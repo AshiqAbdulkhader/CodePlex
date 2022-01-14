@@ -27,6 +27,15 @@ export const CodeSide = styled.div`
     justify-content: center;
 `;
 
+export const OutputSide = styled.div`
+    height: 100%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
+
 export const Exec = styled.div`
     height: 13%;
     width: 95%;
