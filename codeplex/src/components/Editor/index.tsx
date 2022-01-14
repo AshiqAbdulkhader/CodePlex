@@ -153,10 +153,6 @@ const Editor: React.FC<Props> = ({ response }) => {
 						indentUnit: 4,
 					}}
 					onChange={(editor, data, value) => {
-						// editor.focus();
-						// let position = {
-						// }
-						// editor.setCursor(editor.getCursor());
 						setValue(value);
 					}}
 				/>
