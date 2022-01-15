@@ -83,16 +83,8 @@ const Editor: React.FC<Props> = ({ response }) => {
 	}
 
 	const fetchAPIresult = () => {
-		fetch('http://localhost:80/compile', {
+		fetch('http://13.233.71.241/compile', {
 			method: 'POST',
-			headers: {
-				'Accept': 'application/json',
-				'Access-Control-Allow-Origin': 'localhost:80',
-				'Access-Control-Allow-Credentials': 'true',
-				'Access-Control-Allow-Methods': 'POST',
-				'Access-Control-Allow-Headers': 'Content-Type',
-				'Content-Type': 'application/json'
-			},
 			body: JSON.stringify({
 				code: value,
 				lang: mode.toUpperCase(),
