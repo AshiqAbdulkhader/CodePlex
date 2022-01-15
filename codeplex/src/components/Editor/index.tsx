@@ -18,7 +18,10 @@ type Props = {
 	response: Function;
 }
 
+let lang = "python"
+
 const Editor: React.FC<Props> = ({ response }) => {
+
 	const getInitialState = () => {
 		const mode = "python";
 		const theme = "the-matrix";
@@ -27,11 +30,11 @@ const Editor: React.FC<Props> = ({ response }) => {
 		return { mode, theme, value };
 	}
 
+
 	const [mode, setMode] = useState(getInitialState().mode);
 	const [theme, setTheme] = useState(getInitialState().theme);
 	const [value, setValue] = useState(getInitialState().value);
 
-	var lang = "";
 
 	const ThemeChange = (e: any) => {
 		setTheme(e.target.value);
@@ -39,11 +42,9 @@ const Editor: React.FC<Props> = ({ response }) => {
 
 	const ModeChange = (e: any) => {
 		lang = e.target.value;
+		setMode(lang);
 		if (lang === "c" || lang === "cpp" || lang === "java" || lang === "kotlin") {
 			setMode("clike");
-		}
-		else {
-			setMode(e.target.value);
 		}
 	}
 
@@ -76,27 +77,34 @@ const Editor: React.FC<Props> = ({ response }) => {
 	});
 
 	const saveFile = () => {
-		const ext = extensionFinder(lang);
+		const ext = extensionFinder(mode);
 		const blob = new Blob([value], { type: "text/plain;charset=utf-8" });
 		const name = "" + Date.now() + "." + ext;
 		FileSaver.saveAs(blob, `${name}`);
 	}
 
 	const fetchAPIresult = () => {
+		console.log("fetching " + lang);
 		fetch('http://13.233.71.241/compile', {
 			method: 'POST',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json',
+			},
 			body: JSON.stringify({
 				code: value,
-				lang: mode.toUpperCase(),
+				lang: lang.toUpperCase(),
 				input: "",
 				id: 0
 			})
-		}).then((response) => response.json())
-			.then((responseJson) => {
-				response(responseJson);
-			}).catch((error) => {
-				console.error(error);
-			});
+		}).then((response) => {
+			return response.text();
+		}).then((responseJsoninText) => {
+			const responseJSON = JSON.parse(responseJsoninText);
+			response(responseJSON);
+		}).catch((error) => {
+			console.error(error);
+		});
 	}
 
 	return (
@@ -121,17 +129,17 @@ const Editor: React.FC<Props> = ({ response }) => {
 						<option value="the-matrix" selected>The Matrix</option>
 						<option value="vibrant-ink">Vibrant ink</option>
 					</ThemeSelect>
-					<ModeSelect onChange={ModeChange} value={mode}>
+					<ModeSelect onChange={ModeChange} value={lang}>
 						<option value="c">C</option>
 						<option value="cpp">C++</option>
-						<option value="go">Go</option>
-						<option value="java">Java</option>
-						<option value="javascript">Javascript</option>
-						<option value="kotlin">Kotlin</option>
-						<option value="php">PHP</option>
+						{/* <option value="go">Go</option> */}
+						{/* <option value="java">Java</option> */}
+						{/* <option value="javascript">Javascript</option> */}
+						{/* <option value="kotlin">Kotlin</option> */}
+						{/* <option value="php">PHP</option> */}
 						<option value="python">Python</option>
-						<option value="swift">Swift</option>
-						<option value="xml">XML</option>
+						{/* <option value="swift">Swift</option> */}
+						{/* <option value="xml">XML</option> */}
 					</ModeSelect>
 				</EditorHeading>
 				<CodeMirror
