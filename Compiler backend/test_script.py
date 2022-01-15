@@ -1,7 +1,7 @@
 import requests
 import json
 from flask import Markup
-RUN_URL = 'http://localhost/compile/'
+RUN_URL = 'http://13.233.71.241/compile/'
 
 code = "print('Hello World!')"
 lang = "PYTHON"
