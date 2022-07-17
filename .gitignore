@@ -2,7 +2,6 @@ codeplex/node_modules
 codeplex/.firebase/
 codeplex/build/
 codeplex/.firebaserc
-codeplex/firebase.json
 codeplex/src/react-app-env.d.ts
 codeplex/build
 *.pyc
